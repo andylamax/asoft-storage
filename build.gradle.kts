@@ -80,19 +80,14 @@ kotlin {
                 implementation(asoftTest("jvm"))
             }
         }
-        val jsCommonMain by creating {
+
+        val jsMain by getting {
             dependencies {
                 implementation(kotlin("stdlib-js"))
                 coreLibs("js")
             }
         }
-        val jsMain by getting {
-            dependsOn(jsCommonMain)
-//            dependencies {
-//                implementation(kotlin("stdlib-js"))
-//                coreLibs("js")
-//            }
-        }
+
         val jsTest by getting {
             dependencies {
                 implementation(asoftTest("js"))
